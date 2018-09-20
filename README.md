@@ -9,7 +9,7 @@ Example table output:
 | PR  | Status | Date | Title |
 |----|----|----|----|
 | 292 | open | None | Adds new wiz bang feature |
-| 286 | open | None | Updates UI to be more awesome |
+| 286 | v1.0 | None | Updates UI to be more awesome |
 
 Example list of dictionaries:
 
@@ -18,13 +18,13 @@ Example list of dictionaries:
   {
     'pr': 291, 
     'status': 'closed', 
-    'date': datetime.datetime(2018, 9, 14, 14, 40, 55), 
+    'date': 'None', 
     'title': 'Adds new wiz bang feature'
   },
   {
     'pr': 290, 
     'status': 'v1.0', 
-    'date': datetime.datetime(2018, 9, 14, 14, 40, 55), 
+    'date': 'None', 
     'title': 'Updates UI to be more awesome'
   }
 ]
@@ -36,11 +36,6 @@ Example raw ouput:
 | PR  | Status | Date | Title |
 |----|----|----|----|
 | 292 | open | None | Adds new wiz bang feature |
-| 286 | open | None | Updates UI to be more awesome |
+| 286 | v1.0 | None | Updates UI to be more awesome |
 
-```
-
-```
-grip README.md --export readme.html
-wkhtmltoimage --width 1920 --height 1080 https://www.google.com test.png
 ```

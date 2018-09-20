@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="tomark",
-    version="0.1.1",
+    version="0.1.2",
     author="Joel Dare",
     author_email="joel@joeldare.com",
     description="Convert a list of dictionaries to a markdown formatted table.",

@@ -1,5 +1,6 @@
 class Tomark:
 
+    @staticmethod
     def table(listOfDicts):
         """Loop through a list of dicts and return a markdown table as a multi-line string.
 

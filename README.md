@@ -4,17 +4,12 @@ A Python module that converts a list of dictionaries to a markdown formatted tab
 
 Note: Each dict in the list must have the same number of elements.
 
-Example table output:
-
-| PR  | Status | Date | Title |
-|----|----|----|----|
-| 292 | open | None | Adds new wiz bang feature |
-| 286 | v1.0 | None | Updates UI to be more awesome |
-
-Example list of dictionaries:
+Usage:
 
 ```
-[
+from tomark import Tomark
+
+data = [
   {
     'pr': 291, 
     'status': 'closed', 
@@ -28,7 +23,17 @@ Example list of dictionaries:
     'title': 'Updates UI to be more awesome'
   }
 ]
+
+markdown = Tomark.table(data)
+print(markdown)
 ```
+
+Example table output:
+
+| PR  | Status | Date | Title |
+|----|----|----|----|
+| 292 | open | None | Adds new wiz bang feature |
+| 286 | v1.0 | None | Updates UI to be more awesome |
 
 Example raw ouput:
 

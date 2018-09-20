@@ -4,6 +4,10 @@ A Python module that converts a list of dictionaries to a markdown formatted tab
 
 Note: Each dict in the list must have the same number of elements.
 
+Installing
+
+`!python3 -m pip install --upgrade tomark`
+
 Usage:
 
 ```

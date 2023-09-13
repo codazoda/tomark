@@ -1,23 +1,26 @@
 class Tomark:
 
     @staticmethod
-    def table(listOfDicts):
-        """Loop through a list of dicts and return a markdown table as a multi-line string.
+    def table(list_of_dicts):
+        """Convert a list of dictionaries into a Markdown table.
 
-        listOfDicts -- A list of dictionaries, each dict is a row
+        list_of_dicts -- A list of dictionaries, each dict is a row
         """
-        markdowntable = ""
-        # Make a string of all the keys in the first dict with pipes before after and between each key
-        markdownheader = '| ' + ' | '.join(map(str, listOfDicts[0].keys())) + ' |'
-        # Make a header separator line with dashes instead of key names
-        markdownheaderseparator = '|-----' * len(listOfDicts[0].keys()) + '|'
-        # Add the header row and separator to the table
-        markdowntable += markdownheader + '\n'
-        markdowntable += markdownheaderseparator + '\n'
-        # Loop through the list of dictionaries outputting the rows
-        for row in listOfDicts:
-            markdownrow = ""
-            for key, col in row.items():
-                markdownrow += '| ' + str(col) + ' '
-            markdowntable += markdownrow + '|' + '\n'
-        return markdowntable
+        if not list_of_dicts:
+            return ""
+
+        # Extract keys from the first dictionary
+        keys = list(list_of_dicts[0].keys())
+
+        # Create the header row and separator
+        markdown_header = "| " + " | ".join(keys) + " |\n"
+        markdown_separator = "| " + " | ".join(["---"] * len(keys)) + " |\n"
+
+        # Convert the list of dictionaries into a Markdown table
+        markdown_table = [markdown_header, markdown_separator]
+
+        for row in list_of_dicts:
+            markdown_row = "| " + " | ".join(str(row.get(key, "")) for key in keys) + " |\n"
+            markdown_table.append(markdown_row)
+
+        return "".join(markdown_table)

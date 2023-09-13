@@ -1,3 +1,5 @@
+![CI](https://github.com/TheNewThinkTank/tomark/actions/workflows/wf.yml/badge.svg)
+[![GitHub repo size](https://img.shields.io/github/repo-size/TheNewThinkTank/tomark?style=flat&logo=github&logoColor=whitesmoke&label=Repo%20Size)](https://github.com/TheNewThinkTank/tomark/archive/refs/heads/main.zip)
 # tomark
 
 A Python module that converts a list of dictionaries to a markdown formatted table.
